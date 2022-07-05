@@ -1,0 +1,48 @@
+.aut-msi,
+.aut-iful {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    /* Основной / Серый */
+    color: #4D4D4F;
+}
+
+.spare-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
+    border: 1px solid #EDEDF4;
+    border-radius: 5px;
+
+}
+
+.registration-link {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    text-align: center;
+    text-decoration-line: underline;
+    /* Основной/Голубой */
+    color: #009CB4;
+}
+
+.registration-block {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    text-align: center;
+    /* Основной / Серый */
+    color: #4D4D4F;
+}

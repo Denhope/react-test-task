@@ -6,7 +6,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../.././hooks/usections';
 
 const LoginForm: FC = () => {
-  const { error, isLoading } = useTypedSelector((state) => state.auth);
+  const { errorLogin, errorPassword, isLoading, error } = useTypedSelector((state) => state.auth);
   const { login } = useActions();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -19,10 +19,11 @@ const LoginForm: FC = () => {
       <Form.Item label="Имя пользователя" rules={[rules.required('Введите имя')]} name="username">
         <Input value={userName} onChange={(e) => setUserName(e.target.value)} />
       </Form.Item>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {errorLogin && <div style={{ color: 'red' }}>{errorLogin}</div>}
       <Form.Item label="Пароль" name="password" rules={[rules.required('Введите пароль')]}>
-        <Input value={password} onChange={(e) => setPassword(e.target.value)} />
+        <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </Form.Item>
+      {errorPassword && <div style={{ color: 'red' }}>{errorPassword}</div>}
       <Form.Item>
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox>Запомнить меня на этом компьютере</Checkbox>

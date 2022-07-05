@@ -3,6 +3,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -12,6 +13,7 @@ const stylesHandler = isProduction
 
 const config = {
   entry: "./src/index.tsx",
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -20,6 +22,7 @@ const config = {
     host: "localhost",
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
@@ -44,7 +47,13 @@ const config = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        type: 'asset/resource',
+      },
+      {
+        test: /\.json$/i,
+        type: 'asset/resource',
+        exclude: [path.resolve(__dirname, 'node_modules/axios/package.json')],
+
       },
 
       // Add your rules for custom modules here
@@ -52,7 +61,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
+    extensions: [".tsx", ".ts", ".js", "json"],
   },
 };
 

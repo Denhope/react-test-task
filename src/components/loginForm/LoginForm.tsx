@@ -42,7 +42,7 @@ const LoginForm: FC = () => {
           </Button>
         </Form.Item>
         <Form.Item>
-          <a className="login-form-forgot" href="">
+          <a className="login-form-forgot" href="#">
             Забыли свой пароль?
           </a>
         </Form.Item>

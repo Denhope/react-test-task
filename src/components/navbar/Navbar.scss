@@ -7,7 +7,24 @@
     justify-content: center;
 }
 
+
 .navbar__items {
     justify-content: center;
     gap: 10px
+}
+
+.header-content {
+    display: flex;
+    // gap: 10px;
+    justify-content: space-between;
+    // margin-left: auto;
+    align-items: center;
+}
+
+.header-notification {
+    gap: 20px;
+}
+
+.header-left {
+    gap: 30px;
 }

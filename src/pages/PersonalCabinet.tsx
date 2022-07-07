@@ -4,9 +4,9 @@ import CabinetItems from '../components/personalCabinet/CabinetItems';
 
 const PersonalCabinet: FC = () => {
   return (
-    <div>
+    <>
       <CabinetItems></CabinetItems>
-    </div>
+    </>
   );
 };
 

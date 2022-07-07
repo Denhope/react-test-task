@@ -1,0 +1,43 @@
+.footer-text {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #676A71;
+    flex-direction: column;
+
+}
+
+.footer-block {
+    flex-direction: column;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    gap: 10px;
+
+    /* Основной / Серый */
+
+    color: #4D4D4F;
+}
+
+.block-title {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    /* Основной / Черный */
+
+    color: #231F20;
+}
+
+.copyright {
+    display: flex;
+    text-align: center;
+}

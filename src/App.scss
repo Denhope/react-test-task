@@ -1,5 +1,32 @@
 @import '~antd/dist/antd.css';
+@import './utils/styles/mixins.scss';
+@import './utils/styles/constants.scss';
 
-.h100 {
-    height: calc(100vh - 64px)
+
+.h100 {}
+
+.ant-layout {
+    background-color: #fff;
+    padding: 0 75px;
+    max-width: $content-width;
+    margin: auto;
+}
+
+.header-wrapper {
+    background-color: #fff;
+    max-height: 80px;
+
+}
+
+.content-wrapper {
+
+    padding: 0 50px
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 80px 50px;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: #fff
 }

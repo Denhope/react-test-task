@@ -4,7 +4,6 @@ import { rules } from '../../utils/rules';
 import './LoginForm.scss';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../.././hooks/usections';
-import { ArrowLeftIcon } from '../icons/icons';
 
 const LoginForm: FC = () => {
   const { errorLogin, errorPassword, isLoading, error } = useTypedSelector((state) => state.auth);

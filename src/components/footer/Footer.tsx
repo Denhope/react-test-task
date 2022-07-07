@@ -6,7 +6,7 @@ import { LogoIcon } from '../icons/icons';
 import './Footer.scss';
 const Footer: FC = () => {
   return (
-    <Row>
+    <Row className="footer__content">
       <Col span={7}>
         <Title className="block-title" level={4}>
           <LogoIcon />

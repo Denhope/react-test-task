@@ -12,14 +12,14 @@ const AppRouter = () => {
       {privateRoutes.map((route) => (
         <Route path={route.path} exact={route.exact} component={route.component} key={route.path} />
       ))}
-      <Redirect to={RouteNames.PERSONALCABINET} />
+      <Redirect to={RouteNames.PERSONALCABINET_INFO} />
     </Switch>
   ) : (
     <Switch>
       {publicRoutes.map((route) => (
         <Route path={route.path} exact={route.exact} component={route.component} key={route.path} />
       ))}
-      <Redirect to={RouteNames.LOGIN} />
+      <Redirect to={RouteNames.MAIN} />
     </Switch>
   );
 };

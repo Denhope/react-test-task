@@ -1,5 +1,7 @@
+import { INewsCard } from '../../../models/INewsCard';
+
 export interface NewsState {
-  newsData: Array<any>;
+  newsData: Array<INewsCard>;
   isLoading: boolean;
   error: null | string;
 }

@@ -5,6 +5,8 @@ import Navbar from './components/navbar/Navbar';
 import './App.scss';
 import { useActions } from './hooks/usections';
 import { IUser } from './models/IUser';
+import FooterI from './components/footer/Footer';
+import { Header, Content, Footer } from 'antd/lib/layout/layout';
 
 const App: FC = () => {
   const { setUser, setIsAuth } = useActions();
@@ -18,11 +20,15 @@ const App: FC = () => {
 
   return (
     <Layout>
-      <Navbar />
-      <Layout.Content>
+      <Header className="header-wrapper">
+        <Navbar />
+      </Header>
+      <Content className="content-wrapper">
         <AppRouter />
-      </Layout.Content>
-      <Layout.Footer></Layout.Footer>
+      </Content>
+      <Footer className="footer-wrapper">
+        <FooterI />
+      </Footer>
     </Layout>
   );
 };

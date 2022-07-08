@@ -8,7 +8,7 @@ import './NewsCard.scss';
 const NewsCard: FC<INewsCard> = (props) => {
   const newsCard = props;
   return (
-    <Card hoverable style={{ width: 240 }} cover={<img alt="logo" src={newsCard.logoUrl} />}>
+    <Card hoverable style={{ width: 370 }} cover={<img alt="logo" src={newsCard.logoUrl} />}>
       <Title className="news-card__title" level={4}>
         {newsCard.title}
       </Title>

@@ -5,7 +5,7 @@ import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import UserForm from './UserFormInfo';
 import './MyInfomation.scss';
 const MyInformation: FC = () => {
-  const { isAuth, user } = useTypedSelector((state) => state.auth);
+  const { user } = useTypedSelector((state) => state.auth);
   return (
     <Row className="information-page__wrapper">
       <Space align="center">

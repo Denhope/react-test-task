@@ -1,0 +1,19 @@
+.section__title {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__subtitle {
+    display: flex;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #4D4D4F;
+    gap: 5px
+}
+
+.subtitle__length {
+    color: #009CB4;
+}

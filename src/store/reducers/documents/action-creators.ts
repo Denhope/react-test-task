@@ -1,6 +1,6 @@
 import { AppDispatch } from '../../index';
 import axios from 'axios';
-import dataReestr from '../../../assets/data/reestrs.json';
+import dataDocs from '../../../assets/data/docs.json';
 import { SetIsLoadingAction, DocsActionEnum, RecieveDocsErrorAction } from './types';
 import { IReestr } from '../../../models/IReestr';
 import { IDocs } from '../../../models/IDocs';
@@ -16,7 +16,7 @@ export const DocsActionCreators = {
   featchDocs: () => async (dispatch: AppDispatch) => {
     try {
       dispatch({ type: DocsActionEnum.REQUEST_DOCS });
-      const response = await axios.get<IDocs[]>('dataReestr');
+      const response = await axios.get<IDocs[]>(dataDocs);
 
       setTimeout(() => {
         dispatch({

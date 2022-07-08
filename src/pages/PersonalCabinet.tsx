@@ -1,12 +1,17 @@
-import { Menu } from 'antd';
+import { Divider, Layout } from 'antd';
 import React, { FC } from 'react';
-import CabinetItems from '../components/personalCabinet/CabinetItems';
+import './PersonCabinet.scss';
+import UserCabinetLIst from '../components/personalCabinet/UserCabinetLIst';
 
 const PersonalCabinet: FC = () => {
   return (
-    <>
-      <CabinetItems></CabinetItems>
-    </>
+    <Layout className="user__section">
+      <div className="user__title">
+        <h2>Личный кабинет</h2>
+      </div>
+      <Divider />
+      <UserCabinetLIst />
+    </Layout>
   );
 };
 

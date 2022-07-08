@@ -17,12 +17,6 @@ const Login: FC = () => {
           <ArrowLeftIcon style={{ fontSize: '24px' }} />
           <p className="bask__text">Главная</p>
         </div>
-        {/* <PageHeader
-          className="avtorithation-page-title"
-          title="Главная"
-          onBack={() => router.push(RouteNames.MAIN)}
-          backIcon={<ArrowLeftIcon style={{ fontSize: '24px' }} />}
-        ></PageHeader> */}
 
         <h2>Авторизация</h2>
         <LoginForm />

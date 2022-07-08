@@ -1,5 +1,5 @@
 export interface IReestr {
-  id: number;
+  id: React.Key;
   name: string;
   code: string;
   class: string;

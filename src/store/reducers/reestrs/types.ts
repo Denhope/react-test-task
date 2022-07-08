@@ -1,5 +1,7 @@
+import { IReestr } from '../../../models/IReestr';
+
 export interface ReestrState {
-  reesrtData: Array<any>;
+  reesrtData: Array<IReestr>;
   isLoading: boolean;
   error: null | string;
 }

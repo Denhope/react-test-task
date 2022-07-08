@@ -13,14 +13,14 @@
   },
 
   {
-    "username": "den",
-    "password": "123",
-    "firstname": "Денис",
+    "username": "zaz",
+    "password": "12345",
+    "firstname": "Захар",
     "midlename": "Александрович",
-    "lastname": "Ковальчук",
+    "lastname": "Захар Палазник",
     "country": "Беларусь",
     "city": "Минск",
-    "telephone": "+375297950016",
+    "telephone": "+375221113344",
     "photoUrl": "",
     "registry": [
       {

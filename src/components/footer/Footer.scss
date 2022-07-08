@@ -1,3 +1,16 @@
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 50px;
+    // gap: 10px;
+    // justify-content: space-between;
+
+}
+
+.footer__content {
+    justify-content: space-between;
+}
+
 .footer-text {
     font-family: 'Manrope';
     font-style: normal;
@@ -29,19 +42,13 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height */
 
-
-    /* Основной / Черный */
 
     color: #231F20;
 }
 
 .copyright {
     display: flex;
-    text-align: center;
-}
-
-.footer__content {
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }

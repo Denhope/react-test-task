@@ -12,23 +12,22 @@ const Login: FC = () => {
   const router = useHistory();
   return (
     <>
-      <PageHeader
-        className="avtorithation-page-title"
-        title="Главная"
-        onBack={() => router.push(RouteNames.MAIN)}
-        backIcon={<ArrowLeftIcon style={{ fontSize: '24px' }} />}
-      ></PageHeader>
+      <Layout className="login__section">
+        <div onClick={() => router.push(RouteNames.MAIN)} className="login__back">
+          <ArrowLeftIcon style={{ fontSize: '24px' }} />
+          <p className="bask__text">Главная</p>
+        </div>
+        {/* <PageHeader
+          className="avtorithation-page-title"
+          title="Главная"
+          onBack={() => router.push(RouteNames.MAIN)}
+          backIcon={<ArrowLeftIcon style={{ fontSize: '24px' }} />}
+        ></PageHeader> */}
 
-      <Row justify="center" align="middle">
-        <Title>Авторизация</Title>
-      </Row>
-
-      <Row justify="center" align="middle" className="h100">
+        <h2>Авторизация</h2>
         <LoginForm />
-      </Row>
-      <Row justify="center" align="middle">
         <SpareForm />
-      </Row>
+      </Layout>
     </>
   );
 };

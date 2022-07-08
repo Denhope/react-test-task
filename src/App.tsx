@@ -19,17 +19,17 @@ const App: FC = () => {
   }, []);
 
   return (
-    <Layout>
-      <Header className="header-wrapper">
+    <>
+      <Header className="wrapper">
         <Navbar />
       </Header>
-      <Content className="content-wrapper">
+      <Content className="wrapper">
         <AppRouter />
       </Content>
-      <Footer className="footer-wrapper">
+      <Footer className="wrapper">
         <FooterI />
       </Footer>
-    </Layout>
+    </>
   );
 };
 

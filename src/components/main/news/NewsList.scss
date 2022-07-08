@@ -1,4 +1,15 @@
+.news__Wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .news__list {
     display: flex;
-    gap: 10px
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 3rem;
+    padding: 0rem;
+    row-gap: 4rem;
+    justify-content: center;
 }

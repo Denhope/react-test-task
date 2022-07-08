@@ -1,4 +1,4 @@
-import { Avatar, Divider, Image, Layout, Menu, PageHeader, Row, Space } from 'antd';
+import { Avatar, Divider, Image, Input, Layout, Menu, PageHeader, Row, Space } from 'antd';
 import Search from 'antd/lib/input/Search';
 import React, { FC, useState } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -7,7 +7,13 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { RouteNames } from '../../router';
 import './Navbar.scss';
 
-import { NotesCalendarIcon, BellIcon, LineIcon, LogoIcon } from '../../components/icons/icons';
+import {
+  NotesCalendarIcon,
+  BellIcon,
+  LineIcon,
+  LogoIcon,
+  SearchIcon,
+} from '../../components/icons/icons';
 import { UserOutlined } from '@ant-design/icons';
 
 const Navbar: FC = () => {
@@ -20,12 +26,17 @@ const Navbar: FC = () => {
   const { isAuth, user } = useTypedSelector((state) => state.auth);
 
   return (
-    <Row className="header-content">
-      <Row align="middle" className="header-left">
+    <Row className="header__wrapper">
+      <Row align="middle" className="header__left ">
         <LogoIcon />
-        <Search placeholder="поиск" onSearch={() => null} style={{ maxWidth: 200 }} />
+        <Input
+          prefix={<SearchIcon />}
+          placeholder="поиск"
+          onChange={() => null}
+          style={{ maxWidth: 200 }}
+        />
       </Row>
-      <Row align="middle" className="header-end">
+      <Row align="middle" className="header__end">
         <Space align="center" size={20}>
           <Row align="middle" className="header-notification">
             <NotesCalendarIcon style={{ fontSize: '32px' }} />

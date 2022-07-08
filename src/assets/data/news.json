@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "logoUrl": "public/image/news/news4.png",
     "title": "Технические работы 30.05.2022",
     "discription": "В связи с проведением технических работ 30.05.2022 с 15:00 могут наблюдаться пер...",
@@ -7,6 +8,7 @@
     "link": ""
   },
   {
+    "id": "2",
     "logoUrl": "public/image/news/news4.png",
     "title": "Изменение справочника",
     "discription": "Системы управления  базами данных",
@@ -14,6 +16,7 @@
     "link": ""
   },
   {
+    "id": "3",
     "logoUrl": "public/image/news/news1.png",
     "title": "Лицензирование в Беларуси",
     "discription": "Системы управления  базами данных",
@@ -21,6 +24,7 @@
     "link": ""
   },
   {
+    "id": "4",
     "logoUrl": "public/image/news/news2.png",
     "title": "Обновление версии реестра ПО",
     "discription": "Системы управления  базами данных",
@@ -28,6 +32,7 @@
     "link": ""
   },
   {
+    "id": "5",
     "logoUrl": "public/image/news/news3.png",
     "title": "Обновление версии реестра ПО",
     "discription": "Системы управления  базами данных",
@@ -35,6 +40,7 @@
     "link": ""
   },
   {
+    "id": "6",
     "logoUrl": "public/image/news/news5.png",
     "title": "Обновление версии реестра ПО",
     "discription": "Системы управления  базами данных",

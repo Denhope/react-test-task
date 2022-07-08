@@ -1,4 +1,4 @@
-import { Card, Layout, Row, Space } from 'antd';
+import { Button, Card, Layout, Row, Space } from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import React, { FC, useEffect } from 'react';
 import { useActions } from '../../../hooks/usections';
@@ -14,9 +14,10 @@ const NewList: FC = () => {
   }, []);
 
   return (
-    <Layout className="news__section">
+    <Layout id="news" className="news__section">
       <div className="news__wrapper">
         <h2 className="title">Новости</h2>
+
         <Row className="news__list">
           {newsData.map((newsDataItem) => (
             <NewsCard
@@ -29,6 +30,11 @@ const NewList: FC = () => {
               id={newsDataItem.id}
             ></NewsCard>
           ))}
+        </Row>
+        <Row align="middle" justify="center" id="news">
+          <Button size={'large'} type="primary" className="btn-primary">
+            Показать Все
+          </Button>
         </Row>
       </div>
     </Layout>

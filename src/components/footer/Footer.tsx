@@ -29,10 +29,18 @@ const Footer: FC = () => {
             Информация
           </Title>
           <Row className="footer-block">
-            <span>Реестры</span>
-            <span>Новости</span>
-            <span>Документы</span>
-            <span>Вопросы</span>
+            <span>
+              <a href="#reestrs">Реестры</a>
+            </span>
+            <span>
+              <a href="#news">Новости</a>
+            </span>
+            <span>
+              <a href="#docs">Документы</a>
+            </span>
+            <span>
+              <a href="#questions">Вопросы</a>
+            </span>
           </Row>
         </Col>
         <Col span={6}>

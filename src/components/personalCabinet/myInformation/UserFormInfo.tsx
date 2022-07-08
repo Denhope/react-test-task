@@ -114,7 +114,9 @@ const UserForm = () => {
         </Row>
       </Form>
       <Divider />
-      <Button type="primary">Сохранить</Button>
+      <Button className="btn-primary" type="primary">
+        Сохранить
+      </Button>
     </Row>
   );
 };

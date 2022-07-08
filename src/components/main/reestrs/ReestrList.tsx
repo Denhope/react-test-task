@@ -8,7 +8,7 @@ import Table from './table/Table';
 const ReestrList: FC = () => {
   return (
     <>
-      <Layout className="information__section">
+      <Layout id="reestrs" className="information__section">
         <div className="information__wrapper">
           <div className="information__content">
             <h1>РЕЕСТР ПРОГРАМНОГО ОБЕСПЕЧЕНИЯ</h1>

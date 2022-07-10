@@ -61,4 +61,14 @@ export const AuthActionCreators = {
     dispatch(AuthActionCreators.setUser({} as IUser));
     dispatch(AuthActionCreators.setIsAuth(false));
   },
+  setUserInfo: (user: IUser) => async (dispatch: AppDispatch) => {
+    try {
+      const userInfo = localStorage.getItem('userInfo' || '');
+      const json = JSON.parse(userInfo) as IUser;
+      dispatch(AuthActionCreators.setUser(json));
+      localStorage.setItem('userInfo', JSON.stringify(json));
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import 'antd/dist/antd.css';
 
 import { Button, Col, Divider, Form, Input, Row, Select } from 'antd';
@@ -6,30 +6,49 @@ import './UserFormInfo.scss';
 import Title from 'antd/lib/typography/Title';
 import { rules } from '../../../utils/rules';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
+import { IUser } from '../../../models/IUser';
 const { Option } = Select;
+interface UserFormProps {
+  user: IUser;
+  submit: (user: IUser) => void;
+}
 
-const UserForm = () => {
-  const { user } = useTypedSelector((state) => state.auth);
-  const [firstname, setFirstName] = useState(user.firstname);
-  const [lastname, setLastName] = useState(user.lastname);
-  const [password, setPassword] = useState(user.password);
-  const [country, setCountry] = useState(user.country);
-  const [telephone, setTelephone] = useState(user.telephone);
-  const [midlename, setMidleName] = useState(user.midlename);
-  const [city, setCity] = useState(user.city);
+const UserForm: FC<UserFormProps> = (props) => {
+  const [userInfo, setUserInfo] = useState<IUser>({
+    firstname: props.user.firstname,
+    lastname: props.user.lastname,
+    password: props.user.password,
+    username: props.user.username,
+    city: props.user.city,
+    country: props.user.country,
+    midlename: props.user.midlename,
+    photoUrl: props.user.photoUrl,
+    telephone: props.user.telephone,
+  } as IUser);
+
+  const submitForm = () => {
+    props.submit({ ...userInfo });
+  };
+
   return (
     <Row>
-      <Form className="form__user" layout="vertical" onFinish={() => null}>
+      <Form className="form__user" layout="vertical" onFinish={submitForm}>
         <Title className="block-title" level={4}>
           Основные данные
         </Title>
         <Row className="user-form__wrapper">
           <Col span="11">
             <Form.Item label="Имя">
-              <Input value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+              <Input
+                value={userInfo.firstname}
+                onChange={(e) => setUserInfo({ ...userInfo, firstname: e.target.value })}
+              />
             </Form.Item>
             <Form.Item label="Отчество">
-              <Input value={midlename} onChange={(e) => setMidleName(e.target.value)} />
+              <Input
+                value={userInfo.midlename}
+                onChange={(e) => setUserInfo({ ...userInfo, midlename: e.target.value })}
+              />
             </Form.Item>
             <Form.Item
               name="select-city"
@@ -37,19 +56,21 @@ const UserForm = () => {
               rules={[rules.required('Пожалуйста выберите город')]}
             >
               <Select
-                defaultValue={user.city}
+                defaultValue={props.user.city}
                 placeholder="выберите город"
-                value={city}
-                onChange={() => null}
+                onChange={(city: string) => setUserInfo({ ...userInfo, city })}
               >
-                <Option value="china">Минск</Option>
-                <Option value="usa">Брест</Option>
+                <Option value="minsk">Минск</Option>
+                <Option value="brest">Брест</Option>
               </Select>
             </Form.Item>
           </Col>
           <Col span="11">
             <Form.Item label="Фамилия">
-              <Input value={lastname} onChange={(e) => setLastName(e.target.value)} />
+              <Input
+                value={userInfo.lastname}
+                onChange={(e) => setUserInfo({ ...userInfo, lastname: e.target.value })}
+              />
             </Form.Item>
             <Form.Item
               name="select-country"
@@ -57,18 +78,20 @@ const UserForm = () => {
               rules={[rules.required('Пожалуйста выберите страну')]}
             >
               <Select
-                defaultValue={user.city}
+                defaultValue={props.user.country}
                 placeholder="выберите страну"
-                value={country}
-                onChange={() => null}
+                onChange={(country: string) => setUserInfo({ ...userInfo, country })}
               >
-                <Option value="china">Беларусь</Option>
+                <Option value="belarus">Беларусь</Option>
                 <Option value="usa">U.S.A</Option>
               </Select>
             </Form.Item>
 
             <Form.Item label="Мобильный телефон">
-              <Input value={telephone} onChange={(e) => setTelephone(e.target.value)} />
+              <Input
+                value={userInfo.telephone}
+                onChange={(e) => setUserInfo({ ...userInfo, telephone: e.target.value })}
+              />
             </Form.Item>
           </Col>
         </Row>
@@ -108,13 +131,16 @@ const UserForm = () => {
                 }),
               ]}
             >
-              <Input.Password value={password} onChange={(e) => setPassword(e.target.value)} />
+              <Input.Password
+                value={userInfo.password}
+                onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
+              />
             </Form.Item>
           </Col>
         </Row>
       </Form>
       <Divider />
-      <Button className="btn-primary" type="primary">
+      <Button className="btn-primary" type="primary" onClick={submitForm}>
         Сохранить
       </Button>
     </Row>

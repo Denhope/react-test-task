@@ -54,8 +54,11 @@ const Navbar: FC = () => {
                     <Menu.Item onClick={exit} key={1}>
                       Выйти
                     </Menu.Item>
-                    <Menu.Item onClick={() => router.push(RouteNames.PERSONALCABINET_INFO)} key={2}>
+                    <Menu.Item key={2} onClick={() => router.push(RouteNames.PERSONALCABINET_INFO)}>
                       Личный кабинет
+                    </Menu.Item>
+                    <Menu.Item key={3} onClick={() => router.push(RouteNames.MAIN)}>
+                      Главная
                     </Menu.Item>
                   </Menu.SubMenu>
                 </Menu>

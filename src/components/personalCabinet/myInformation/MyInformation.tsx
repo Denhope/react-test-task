@@ -4,8 +4,16 @@ import React, { FC } from 'react';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import UserForm from './UserFormInfo';
 import './MyInfomation.scss';
+import { useActions } from '../../../hooks/usections';
+import { IUser } from '../../../models/IUser';
 const MyInformation: FC = () => {
   const { user } = useTypedSelector((state) => state.auth);
+  const { saveUserInfo, setUser } = useActions();
+
+  const setUserInfo = (user: IUser) => {
+    saveUserInfo(user);
+    setUser(user);
+  };
   return (
     <Row className="information-page__wrapper">
       <Space align="center">
@@ -16,7 +24,7 @@ const MyInformation: FC = () => {
       </Space>
 
       <Divider />
-      <UserForm />
+      <UserForm submit={(user) => setUserInfo(user)} user={user} />
     </Row>
   );
 };

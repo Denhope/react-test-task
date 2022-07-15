@@ -1,0 +1,64 @@
+@import '~antd/dist/antd.css';
+@import './utils/styles/normalize.scss';
+@import './utils/styles/base.scss';
+@import './utils/styles/mixins.scss';
+@import './utils/styles/constants.scss';
+
+
+.ant-layout {
+    padding: 8rem 5rem;
+    margin: auto;
+    background-color: #fff;
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin: auto;
+    padding: 0 6rem;
+    background-color: #fff;
+}
+
+.header-wrapper {
+    background-color: #fff;
+    max-height: 8rem;
+
+}
+
+.btn-primary {
+    background-color: $color-blue;
+    width: 270px;
+    height: 56px;
+    border-color: $color-blue;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    letter-spacing: 0.01em;
+
+    /* Основной / Белый */
+
+    color: #FFFFFF;
+
+
+    &hover {
+
+        color: #fff;
+        border-color: #01B8D5;
+        background: #01B8D5;
+    }
+
+    /* Основной/Голубой */
+
+
+    border-radius: 5px;
+}
+
+
+
+
+h1 {
+    margin: 0
+}

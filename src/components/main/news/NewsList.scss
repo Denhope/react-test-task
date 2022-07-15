@@ -1,0 +1,23 @@
+.news__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+
+}
+
+.news__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 3rem;
+    padding: 0rem;
+    row-gap: 4rem;
+    justify-content: center;
+}
+
+.news__data {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem
+}

@@ -1,0 +1,64 @@
+@import './mixins.scss';
+@import "./constants.scss";
+@import "./placeholders.scss";
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+body {
+    font-size: 1.6rem;
+    // @extend %font;
+    @extend %transition;
+    background-color: $color-background;
+
+}
+
+.body_lock {
+    overflow: hidden;
+
+}
+
+
+p {
+    @include font(1.5rem, 160%, $color: $black);
+    @extend %font-primery;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+.section {
+    padding: 0, 50px
+}
+
+h2 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+
+    /* Основной / Черный */
+
+    color: #231F20;
+}
+
+h1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+}

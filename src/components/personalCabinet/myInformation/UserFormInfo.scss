@@ -1,0 +1,14 @@
+.form__user {
+    width: 100%;
+}
+
+.user-form__wrapper {
+    column-gap: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__password {
+    display: flex;
+    flex-direction: column
+}

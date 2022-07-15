@@ -1,0 +1,27 @@
+.ant-page-header-heading {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.navbar__items {
+    justify-content: center;
+    gap: 1rem
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem
+}
+
+.header-notification {
+    gap: 2rem
+}
+
+.header__left {
+    flex-wrap: nowrap;
+    gap: 3rem
+}

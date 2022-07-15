@@ -1,0 +1,43 @@
+.information__wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+
+.information__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 38rem;
+    gap: 2rem;
+}
+
+.information__logo {
+    display: flex;
+
+}
+
+.information__subtitle {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.reestr__wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.reestr__title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title__icons {
+    display: flex;
+    align-items: center;
+}

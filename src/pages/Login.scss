@@ -1,0 +1,27 @@
+.avtorithation-page-title {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    color: #676A71;
+}
+
+.login__back {
+    cursor: pointer;
+}
+
+.login__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__back {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-right: auto
+}
